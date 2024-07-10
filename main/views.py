@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    return render(request, "main/index.html")
 
 def post_list(request):
-    return render(request, "post_list.html")
+    return render(request, "main/post_list.html")
