@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% comment %}
+{% extends 'base.html' %}
+{% endcomment %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-3">
+    {% for item in post_objects %}
+    <div class="alert alert-success" role="alert">
+        <p>タイトル：{{ item.title }}</p>
+        <p>内容：{{ item.content }}</p>
+        <p>投稿者：{{item.user.username}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

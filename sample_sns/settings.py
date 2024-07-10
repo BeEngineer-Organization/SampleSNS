@@ -142,5 +142,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 
 SITE_ID = 1 
 
-LOGIN_REDIRECT_URL = ''         
+LOGIN_REDIRECT_URL = "post_list"
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+AUTH_USER_MODEL = 'main.CustomUser'

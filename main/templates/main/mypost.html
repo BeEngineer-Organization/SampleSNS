@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-3">
+    <p>フォロワー数：{{ users.first.follower_count }}</p>
+    <p>投稿数：{{ users.first.posts_count }}</p>
+    {% for item in post_objects %}
+    <div class="alert alert-success" role="alert">
+        <p>タイトル：{{ item.title }}</p>
+        <p>内容：{{ item.content }}</p>
+        <p>投稿者：{{item.user.username}}</p>
+        <p>いいね数：<i class="fas fa-heart text-danger" id="like-for-post-icon"></i> {{ item.likes_count }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
